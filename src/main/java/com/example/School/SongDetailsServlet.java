@@ -48,7 +48,7 @@ public class SongDetailsServlet extends HttpServlet {
 
         try (PrintWriter out = response.getWriter()) {
             out.println("<html>");
-            out.println("<head><title>Информация о песне</title></head>");
+            out.println("<head><title>Song info</title></head>");
             out.println("<body>");
             out.println("<h1>Song: " + song.name + "</h1>");
             out.println("<table border='1'>");
