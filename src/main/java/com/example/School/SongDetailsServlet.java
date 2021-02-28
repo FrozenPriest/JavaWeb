@@ -32,9 +32,8 @@ public class SongDetailsServlet extends HttpServlet {
         int id = -1;
         try {
             id = Integer.parseInt(name);
-        } catch (NumberFormatException e) {
-            e.printStackTrace();
-        }
+        } catch (NumberFormatException ignored) {}
+
         response.setContentType("text/html;charset=UTF-8");
 
         Song song = SongRepository.getSong(id);

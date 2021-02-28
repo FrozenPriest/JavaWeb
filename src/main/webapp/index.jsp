@@ -5,9 +5,9 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
+<h1><%= "Song library!" %>
 </h1>
 <br/>
-<a href="getSongInfo">Hello Servlet</a>
+<a href="getSongInfo">Get song info</a>
 </body>
 </html>
