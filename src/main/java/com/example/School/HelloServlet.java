@@ -1,28 +1,55 @@
 package com.example.School;
 
-import java.io.*;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+import java.io.IOException;
+import java.io.PrintWriter;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
+@WebServlet(name = "songInfoServlet", value = "/getSongInfo")
 public class HelloServlet extends HttpServlet {
-    private String message;
 
-    public void init() {
-        message = "Hello World!";
-    }
 
+    @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
-
-        // Hello
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
-        out.println("</body></html>");
+        processRequest(request, response);
     }
 
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        processRequest(req, resp);
+    }
+
+    @Override
     public void destroy() {
+    }
+
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        request.setCharacterEncoding("utf-8");
+        String name = request.getParameter("id");
+        int id = -1;
+        try {
+            id = Integer.parseInt(name);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
+        response.setContentType("text/html;charset=UTF-8");
+
+        Song song = SongRepository.getSong(id);
+
+        try (PrintWriter out = response.getWriter()) {
+            out.println("<html>");
+            out.println("<head><title>Информация о песне</title></head>");
+            out.println("<body>");
+            out.println("<h1>Song: " + song.name + "</h1>");
+            out.println("<table border='1'>");
+            out.println("<tr><td><b>Name</b></td><td><b>Author</b ></td><td><b> Duration </b></td><td><b> Listen time </b></td></tr> ");
+            out.println("<tr><td><b>" + song.name + "</b></td><td><b>" + song.author + "</b ></td><td><b> " + song.duration + " </b></td><td><b> " + song.listenTime + " </b></td></tr> ");
+            out.println("</table>");
+            out.println("</body>");
+            out.println("</html>");
+        }
     }
 }
