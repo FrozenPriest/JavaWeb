@@ -1,5 +1,8 @@
 package com.example.School;
 
+/**
+ * Song POJO class
+ */
 public class Song {
     public String name, author;
     public int listenTime, duration;

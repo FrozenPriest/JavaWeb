@@ -1,6 +1,12 @@
 package com.example.School;
 
 public class SongRepository {
+    /**
+     * Retrieve song by id
+     *
+     * @param id song id
+     * @return song with id(now just sample data)
+     */
     public static Song getSong(int id) {
         switch (id) {
             case 0:
