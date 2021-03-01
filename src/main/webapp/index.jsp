@@ -8,6 +8,6 @@
 <h1><%= "Song library!" %>
 </h1>
 <br/>
-<a href="getSongInfo">Get song info</a>
+<a href="song_library.jsp">Library</a>
 </body>
 </html>
