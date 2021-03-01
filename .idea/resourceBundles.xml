@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ResourceBundleManager">
+    <file url="file://$PROJECT_DIR$/MusicStrings.properties" />
+    <file url="file://$PROJECT_DIR$/MusicStrings_ru.properties" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/music_info.properties" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/music_info_ru.properties" />
+    <custom-resource-bundle>
+      <file value="file://$PROJECT_DIR$/MusicStrings.properties" />
+      <file value="file://$PROJECT_DIR$/MusicStrings_ru.properties" />
+      <file value="file://$PROJECT_DIR$/MusicStrings_ru_RU.properties" />
+      <base-name>MusicStrings</base-name>
+    </custom-resource-bundle>
+    <custom-resource-bundle>
+      <file value="file://$PROJECT_DIR$/src/main/resources/music_info.properties" />
+      <file value="file://$PROJECT_DIR$/src/main/resources/music_info_en.properties" />
+      <file value="file://$PROJECT_DIR$/src/main/resources/music_info_ru.properties" />
+      <base-name>music_info</base-name>
+    </custom-resource-bundle>
+  </component>
+</project>
