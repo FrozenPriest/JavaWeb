@@ -11,16 +11,21 @@
         justify-content: center;
         align-items: center;
     }
-
-
 </style>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" errorPage="error_page.jsp" %>
 <html>
 <head>
     <title>Song library</title>
 
 </head>
 <body>
+<div>
+    <% request.setCharacterEncoding("UTF-8");
+        String name = request.getParameter("name");
+        if (name == null || name.trim().equals(""))
+            throw new IllegalArgumentException("Name expected");
+    %>
+</div>
 <div id="header" class="layout-form">
     <h1>Get song</h1>
 </div>
