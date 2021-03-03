@@ -16,13 +16,21 @@
 <h1 class="layout-form"><%= "Song library!" %>
 </h1>
 <br/>
-<form action="song_library.jsp" class="layout-form">
+<form action="${pageContext.request.contextPath}/login" class="layout-form">
     <table>
         <tr>
             <td>Enter your name</td>
             <td>
                 <label>
                     <input type="text" name="name"/>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>Enter your color</td>
+            <td>
+                <label>
+                    <input type="color" name="color"/>
                 </label>
             </td>
         </tr>

@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"com.example.School","l":"Song"},{"p":"com.example.School","l":"SongDetailsServlet"},{"p":"com.example.School","l":"SongRepository"}];updateSearchResults();
