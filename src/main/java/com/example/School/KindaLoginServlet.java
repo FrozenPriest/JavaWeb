@@ -49,9 +49,9 @@ public class KindaLoginServlet extends HttpServlet {
         session.setAttribute("count", ++count);
         session.setAttribute("lastEnter", new Date().toString());
 
-        System.out.println("LOL: " + session.getAttribute("user"));
-        System.out.println("LOL: " + session.getAttribute("count"));
-        System.out.println("LOL: " + session.getAttribute("lastEnter"));
+        System.out.println("Servlet: " + session.getAttribute("user"));
+        System.out.println("Servlet: " + session.getAttribute("count"));
+        System.out.println("Servlet: " + session.getAttribute("lastEnter"));
         response.sendRedirect(response.encodeRedirectURL(request.getContextPath() + "/song_library.jsp"));
     }
 }
